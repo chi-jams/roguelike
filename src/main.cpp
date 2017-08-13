@@ -1,16 +1,11 @@
-#include <iostream>
 
-#include <GL/glew.h>
-#include <GL/gl.h>
-#include <GLFW/glfw3.h>
-
-#include <glm/glm.hpp>
-#include <glm/gtc/matrix_transform.hpp>
-
+#include "GameWindow.h"
 
 int main() {
 
-    std::cout << "Hello world" << std::endl;
+    GameWindow game_window = GameWindow();
+
+    game_window.RunGame();
 
     return 0;
 }
