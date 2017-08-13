@@ -50,7 +50,7 @@ $(PROGNAME): $(OBJS)
 
 # ... or we just use stuff that does this automatically
 $(OBJDIR)/%.o: $(SRCDIR)/%.cpp
-	$(CXX) $(CFLAGS) $(INCPATH) -o $@ $<
+	$(CC) $(CFLAGS) $(INCPATH) -o $@ $<
 
 # Deletes all of the compiled files in the folder
 clean:
