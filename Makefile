@@ -1,9 +1,10 @@
 
 # The name of your compiled project
-PROGNAME = blep
+PROGNAME = rogue_like 
 
 SRCDIR = src
 OBJDIR = obj
+
 
 # All the dependencies of the final program
 CPPS = $(wildcard $(SRCDIR)/*.cpp)
@@ -22,18 +23,11 @@ CC = g++
 CFLAGS = -Wall -c -g
 
 # Linker Flags
-LFLAGS = -Wall -g
+LFLAGS = -Wall
 
-INCPATH += -I./include 
-LIBPATH += -L./lib
+INCPATH += -I./include
 
-################
-# OPENGL STUFF #
-################
-
-INCPATH += -IC:/Strawberry/c/include
-LIBPATH += -LC:/Strawberry/c/lib
-LIBS += -lglew32 -lglfw3 -lgdi32 -lopengl32 -glu32
+LIBS += -lGLEW -lglfw -lSOIL -lGL -lGLU
 
 # The linking instruction for the final program
 $(PROGNAME): $(OBJS)
@@ -54,7 +48,7 @@ $(OBJDIR)/%.o: $(SRCDIR)/%.cpp
 
 # Deletes all of the compiled files in the folder
 clean:
-	rm -r *.o *~ $(PROGNAME)
+	rm -r obj/*.o *~ $(PROGNAME)
 
 # Same as above, but for windows because windows is dumb
 cleanWin:

@@ -1,6 +1,8 @@
 # OpenGL headers
 include/*GL*
 
+rogue_like
+
 # Compiled Object files
 *.slo
 *.lo

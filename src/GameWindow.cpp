@@ -13,6 +13,7 @@ GameWindow::GameWindow() {
 
     width = 1280;
     height = 720;
+    window_name = "";
 
     window = SetupGLFW();
 }
@@ -24,7 +25,6 @@ void GameWindow::RunGame() {
         glfwSwapBuffers( window );
     }   
 }
-
 
 GLFWwindow* GameWindow::SetupGLFW() {
 
@@ -39,7 +39,7 @@ GLFWwindow* GameWindow::SetupGLFW() {
     //glfwWindowHint(GLFW_RESIZABLE, GL_FALSE);
 
     GLFWwindow* window = 
-        glfwCreateWindow(width, height, "", NULL, NULL);
+        glfwCreateWindow(width, height, "Ohai", NULL, NULL);
 
     glfwMakeContextCurrent(window);
 
